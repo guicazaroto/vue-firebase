@@ -1,12 +1,15 @@
-<script setup lang="ts">
-import Home from '@/components/Home.vue'
-</script>
-
 <template>
-  <Suspense>
-    <Home />
-  </Suspense>
+  <v-layout>
+      <v-btn variant="plain">
+        <RouterLink to="/">Home</RouterLink>
+      </v-btn>
+
+      <v-btn variant="plain">
+        <RouterLink to="/add">Add</RouterLink>
+      </v-btn>
+  </v-layout>
+  <main>
+    <RouterView />
+  </main>
 </template>
 
-<style scoped>
-</style>
