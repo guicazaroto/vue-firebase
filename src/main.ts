@@ -15,10 +15,14 @@ const vuetify = createVuetify({
 })
 
 
-createApp(App).use(vuetify).
-  use(VueFire, {
+const app = createApp(App)
+
+app.use(router)
+app.use(vuetify)
+app.use(VueFire, {
   firebaseApp,
   modules: [
     VueFireAuth(),
   ],
-}).use(router).mount('#app')
+})
+app.mount('#app')

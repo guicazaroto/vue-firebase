@@ -5,6 +5,7 @@
         <v-col
           cols="12"
         >
+
           <v-text-field
             v-model="form.name"
             :counter="10"

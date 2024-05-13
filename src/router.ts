@@ -1,14 +1,12 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 
 import HomeView from './components/Home.vue'
 import AddView from './components/Add.vue'
 
-const routes = [
-  { path: '/', component: HomeView },
-  { path: '/add', component: AddView },
-]
-
 export const router = createRouter({
-  history: createMemoryHistory(),
-  routes,
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    { path: '/', name:'home', component: HomeView },
+    { path: '/add', name: 'add', component: AddView },
+  ],
 })

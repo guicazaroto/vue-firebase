@@ -9,7 +9,7 @@
       </v-btn>
   </v-layout>
   <main>
-    <RouterView />
+    <RouterView :key="$route.path" />
   </main>
 </template>
 
