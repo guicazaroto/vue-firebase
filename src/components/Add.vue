@@ -1,3 +1,20 @@
+<script setup>
+import { ref } from 'vue'
+
+const form = ref({
+  name: '',
+  price: '',
+  location: '',
+  description: '',
+  favorite: false
+})
+
+function postCoffee(e) {
+  console.log(form.value)
+}
+
+</script>
+
 <template>
   <v-form @submit.prevent="postCoffee">
     <v-container>
@@ -70,19 +87,3 @@
   </v-form>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const form = ref({
-  name: '',
-  price: '',
-  location: '',
-  description: '',
-  favorite: false
-})
-
-function postCoffee(e) {
-  console.log(form.value)
-}
-
-</script>
